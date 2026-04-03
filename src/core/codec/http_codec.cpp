@@ -1,5 +1,5 @@
-#include "core/codec/http_codec.hpp"
-#include "api/http_types.hpp"
+#include "cpphttp/core/codec/http_codec.hpp"
+#include "cpphttp/api/http_types.hpp"
 #include <algorithm>
 
 namespace cpphttp {

@@ -2,8 +2,7 @@
 
 #include <string>
 #include <vector>
-#include <unordered_map>
-#include "error.hpp"
+#include "cpphttp/error.hpp"
 
 namespace cpphttp {
 

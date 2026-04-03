@@ -1,4 +1,4 @@
-#include "core/connection.hpp"
+#include "cpphttp/core/connection.hpp"
 
 namespace cpphttp {
 

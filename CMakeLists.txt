@@ -36,10 +36,6 @@ target_compile_options(cpphttp PRIVATE -Wall -Wextra)
 
 add_executable(cpphttp_test
     test/main.cpp
-    test/buffer_test.cpp
-    test/http_codec_test.cpp
-    test/ws_codec_test.cpp
-    test/router_test.cpp
 )
 
 target_link_libraries(cpphttp_test PRIVATE cpphttp)

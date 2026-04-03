@@ -1,6 +1,7 @@
 #pragma once
 
-#include "buffer.hpp"
+#include "cpphttp/buffer.hpp"
+#include "cpphttp/error.hpp"
 #include <cstdint>
 #include <functional>
 #include <future>

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "buffer.hpp"
-#include "config.hpp"
+#include "cpphttp/buffer.hpp"
+#include "cpphttp/config.hpp"
 #include <functional>
 #include <future>
 #include <string>

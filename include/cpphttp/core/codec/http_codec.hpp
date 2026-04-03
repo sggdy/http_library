@@ -3,7 +3,8 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include "error.hpp"
+#include "cpphttp/error.hpp"
+#include "cpphttp/api/http_types.hpp"
 
 namespace cpphttp {
 

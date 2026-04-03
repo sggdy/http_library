@@ -3,7 +3,7 @@
 #include <boost/asio.hpp>
 #include <memory>
 #include <functional>
-#include "error.hpp"
+#include "cpphttp/error.hpp"
 
 namespace cpphttp {
 
