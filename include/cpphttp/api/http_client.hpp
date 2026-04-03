@@ -35,6 +35,8 @@ public:
 private:
     struct Impl;
     std::unique_ptr<Impl> impl_;
+    void parseUrl();
+    std::future<HttpResponse> requestAsync(HttpMethod method, const std::string& path, const std::string& body);
 };
 
 }
