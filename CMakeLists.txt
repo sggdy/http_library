@@ -13,6 +13,7 @@ add_library(cpphttp STATIC
     src/api/http_client.cpp
     src/api/ws_server.cpp
     src/api/ws_client.cpp
+    src/api/http_types.cpp
     src/core/router.cpp
     src/core/session.cpp
     src/core/connection.cpp
@@ -40,6 +41,22 @@ add_executable(cpphttp_test
 
 target_link_libraries(cpphttp_test PRIVATE cpphttp)
 target_compile_options(cpphttp_test PRIVATE -Wall -Wextra)
+
+add_executable(http_server_demo demo/http_server_demo.cpp)
+target_link_libraries(http_server_demo PRIVATE cpphttp)
+target_compile_options(http_server_demo PRIVATE -Wall -Wextra)
+
+add_executable(http_client_demo demo/http_client_demo.cpp)
+target_link_libraries(http_client_demo PRIVATE cpphttp)
+target_compile_options(http_client_demo PRIVATE -Wall -Wextra)
+
+add_executable(ws_server_demo demo/ws_server_demo.cpp)
+target_link_libraries(ws_server_demo PRIVATE cpphttp)
+target_compile_options(ws_server_demo PRIVATE -Wall -Wextra)
+
+add_executable(ws_client_demo demo/ws_client_demo.cpp)
+target_link_libraries(ws_client_demo PRIVATE cpphttp)
+target_compile_options(ws_client_demo PRIVATE -Wall -Wextra)
 
 enable_testing()
 add_test(NAME cpphttp_test COMMAND cpphttp_test)
