@@ -16,6 +16,7 @@ add_library(cpphttp STATIC
     src/core/router.cpp
     src/core/session.cpp
     src/core/connection.cpp
+    src/core/buffer.cpp
     src/core/codec/http_codec.cpp
     src/core/codec/ws_codec.cpp
     src/platform/asio_wrapper.cpp
