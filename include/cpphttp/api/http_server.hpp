@@ -1,6 +1,8 @@
 #pragma once
 
-#include "http_types.hpp"
+#include "cpphttp/api/http_types.hpp"
+#include "cpphttp/api/ws_server.hpp"
+#include <boost/asio.hpp>
 #include <memory>
 
 namespace cpphttp {
@@ -21,6 +23,8 @@ public:
     HttpServer& setRequestTimeout(std::chrono::seconds timeout);
     HttpServer& setConfig(const Config& config);
 
+    HttpServer& onWsConnect(std::function<void(WsSession*)> callback);
+
     void start(const std::string& host, uint16_t port);
     void stop();
     std::future<void> startAsync(const std::string& host, uint16_t port);
@@ -34,6 +38,7 @@ public:
 private:
     struct Impl;
     std::unique_ptr<Impl> impl_;
+    void handleConnection(boost::asio::ip::tcp::socket socket);
 };
 
 }
